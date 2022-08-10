@@ -1,0 +1,24 @@
+MODEL:
+  NAME: 'uninet_hierarchical'
+
+DICT_CONFIG:
+  TASKS_DICT: 
+    detect: False
+    inst_depth: False
+    inst_seg: False
+    segment: True
+    depth: True
+    sem_cont: True
+    sur_nor: True
+    ae: True
+  TASK_TO_EN_BLOCK:
+    segment: 6
+    depth: 6
+    sem_cont: 6
+    sur_nor: 6
+    ae: 6
+  TASK_TO_DE_GROUPS: 
+    semantic: ['segment', 'sem_cont', 3]
+    geometric: ['depth', 'sur_nor', 3]
+    ae: ['ae', 0]
+    uninet: []

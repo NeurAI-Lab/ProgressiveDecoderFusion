@@ -1,0 +1,17 @@
+MODEL:
+  NAME: 'uninet_hierarchical'
+  DEPTH:
+    ACTIVATION_FN: 'relu'
+
+DICT_CONFIG:
+  TASKS_DICT: 
+    detect: False
+    inst_depth: False
+    inst_seg: False
+    segment: True
+    depth: True
+    sem_cont: True
+    sur_nor: True
+    ae: True
+  LOSS_INIT_WEIGHTS:
+    depth_loss: 1

@@ -1,0 +1,34 @@
+MODEL:
+  NAME: 'uninet_hierarchical'
+
+DICT_CONFIG:
+  TASKS_DICT: 
+    detect: False
+    inst_depth: False
+    inst_seg: False
+    segment: True
+    depth: True
+    sem_cont: True
+    sur_nor: True
+    ae: True
+  TASK_TO_EN_BLOCK:
+    segment: 6
+    depth: 6
+    sem_cont: 6
+    sur_nor: 6
+    ae: 6
+  TASK_TO_DE_GROUPS: 
+    segment: ['segment', 0]
+    depth: ['depth', 0]
+    sem_cont: ['sem_cont', 0]
+    sur_nor: ['sur_nor', 0]
+    ae: ['ae', 0]
+    uninet: []
+  EXPLAINER_ARGS:
+    min_similarity: 0.95
+    layer_names: ['encoder_decoder.segment_decoder.blocks.0', 'encoder_decoder.depth_decoder.blocks.0',
+       'encoder_decoder.sem_cont_decoder.blocks.0', 'encoder_decoder.sur_nor_decoder.blocks.0', 
+       'encoder_decoder.ae_decoder.blocks.0']
+    valid_tasks: ['segment', 'depth', 'sem_cont', 'sur_nor', 'ae']
+    max_images: 800
+    run_grouping: True
