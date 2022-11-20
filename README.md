@@ -30,4 +30,9 @@ python explain.py --batch-size 4 --workers 0 --crop-size 480 640 --config-file .
 
 If you find the code concerning Progressive Decoder Fusion (PDF) useful in your research, please consider citing our paper: <br />
 
-Pending.
+@article{gurulingan2022curbing,
+  title={Curbing Task Interference using Representation Similarity-Guided Multi-Task Feature Sharing},
+  author={Gurulingan, Naresh Kumar and Arani, Elahe and Zonooz, Bahram},
+  journal={arXiv preprint arXiv:2208.09427},
+  year={2022}
+}
